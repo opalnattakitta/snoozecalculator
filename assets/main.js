@@ -13,3 +13,8 @@
 
 		// Calculate total snooze time (no. of snooze count multiple 9min)
 		const totalSnoozeMinutes = snoozeCount * SNOOZE_MINUTES;
+
+		// Calculate alarm time (wake-up time minus plus total snooze time)
+		let alarmTime = new Date(wakeupTime);
+		alarmTime.setMinutes(alarmTime.getMinutes() - totalSnoozeMinutes);
+		
