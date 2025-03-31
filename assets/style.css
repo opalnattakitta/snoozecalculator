@@ -1,5 +1,19 @@
 :root {
 	--base-size: 16px;
+
+	--blue: #3a5199;
+}
+
+button {
+	font-size: var(--base-size);
+	background-color: var(--blue);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 10px;
 }
 
 label {
