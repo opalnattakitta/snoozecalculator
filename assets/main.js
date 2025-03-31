@@ -18,3 +18,7 @@
 		let alarmTime = new Date(wakeupTime);
 		alarmTime.setMinutes(alarmTime.getMinutes() - totalSnoozeMinutes);
 		
+		// Calculate bedtime (alarm time minus sleep cycles minus fall asleep time)
+		let bedtime = new Date(alarmTime);
+		const totalSleepMinutes = (sleepCycles * CYCLE_MINUTES) + FALL_ASLEEP_MINUTES;
+		bedtime.setMinutes(bedtime.getMinutes() - totalSleepMinutes);
