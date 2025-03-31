@@ -11,6 +11,11 @@
 		const FALL_ASLEEP_MINUTES = 15;
 		const SNOOZE_MINUTES = 9;
 
+		// Parse wake-up time
+		const [wakeupHours, wakeupMinutes] = wakeupTimeStr.split(':').map(num => parseInt(num));
+		let wakeupTime = new Date();
+		wakeupTime.setHours(wakeupHours, wakeupMinutes, 0, 0);
+
 		// Calculate total snooze time (no. of snooze count multiple 9min)
 		const totalSnoozeMinutes = snoozeCount * SNOOZE_MINUTES;
 
