@@ -4,12 +4,27 @@
 
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
+	--light: #f0f5ff;
 }
 
 .form-group {
 	margin-bottom: var(--gutter);
 }
 
+/* Result display */
+.results {
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: var(--light);
+	/* display: none; */
+}
+.results h2 {
+	font-family: "Outfit", sans-serif;
+	color: var(--blue);
+}
+
+/* Calculator Function */
 button {
 	font-size: var(--base-size);
 	background-color: var(--blue);
