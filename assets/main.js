@@ -22,3 +22,18 @@
 		let bedtime = new Date(alarmTime);
 		const totalSleepMinutes = (sleepCycles * CYCLE_MINUTES) + FALL_ASLEEP_MINUTES;
 		bedtime.setMinutes(bedtime.getMinutes() - totalSleepMinutes);
+
+		// Display results
+		document.getElementById('bedtime').textContent = formatTime(bedtime);
+		document.getElementById('alarmTime').textContent = formatTime(alarmTime);
+		document.getElementById('finalWakeup').textContent = formatTime(wakeupTime);
+		
+		// Show explanation
+		document.getElementById('calculation').textContent = 
+			`Based on ${sleepCycles} sleep cycles (${sleepCycles * CYCLE_MINUTES} minutes), ` +
+			`${FALL_ASLEEP_MINUTES} minutes to fall asleep, and ${snoozeCount} snoozes ` +
+			`(${totalSnoozeMinutes} minutes total).`;
+		
+		// Show results section
+		document.getElementById('results').style.display = 'block';
+	}

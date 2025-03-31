@@ -36,6 +36,17 @@
 			</div>
 
 			<button onclick="calculateSleepTimes()">Calculate</button>
+
+			<div class="results" id="results">
+				<h2>Your Sleep Schedule</h2>
+				<p><strong>Go to bed at:</strong> <span class="time" id="bedtime"></span></p>
+				<p><strong>Set alarm for:</strong> <span class="time" id="alarmTime"></span></p>
+				<p><strong>Final wake-up time:</strong> <span class="time" id="finalWakeup"></span></p>
+				
+				<div class="explanation">
+					<p id="calculation"></p>
+				</div>
+			</div>
 		</form>
 	</body>
 </html>
