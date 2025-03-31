@@ -24,7 +24,18 @@
 				<input type="number" id="snoozeCount" min="0" max="10" value="2" required>
 			</div>
 
-			<button>Calculate</button>
+			<div class="form-group">
+				<label for="sleepCycles">Sleep Cycles:</label>
+				<select id="sleepCycles" required>
+					<option value="2">2 cycles (3 hours)</option>
+					<option value="3">3 cycles (4.5 hours)</option>
+					<option value="4">4 cycles (6 hours)</option>
+					<option value="5" selected>5 cycles (7.5 hours - recommended)</option>
+					<option value="6">6 cycles (9 hours)</option>
+				</select>
+			</div>
+
+			<button onclick="calculateSleepTimes()">Calculate</button>
 		</form>
 	</body>
 </html>
