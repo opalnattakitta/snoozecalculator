@@ -11,4 +11,5 @@
 		const FALL_ASLEEP_MINUTES = 15;
 		const SNOOZE_MINUTES = 9;
 
-		
+		// Calculate total snooze time (no. of snooze count multiple 9min)
+		const totalSnoozeMinutes = snoozeCount * SNOOZE_MINUTES;
