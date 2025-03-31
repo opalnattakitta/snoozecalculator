@@ -26,6 +26,14 @@ button:hover {
 	background-color: var(--dark-blue);
 }
 
+input, select {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
 label {
 	display: block;
 	margin-bottom: 5px;
