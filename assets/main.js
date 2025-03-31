@@ -18,3 +18,8 @@
 		} else {
 			sleepCycles = parseInt(sleepCyclesSelect);
 	}
+		
+		// Set Constants value/time for each opt
+			const CYCLE_MINUTES = 90;
+			const FALL_ASLEEP_MINUTES = 15;
+			const SNOOZE_MINUTES = 9;
