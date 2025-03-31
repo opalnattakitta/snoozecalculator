@@ -1,8 +1,13 @@
 :root {
 	--base-size: 16px;
+	--gutter: 15px;
 
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
+}
+
+.form-group {
+	margin-bottom: var(--gutter);
 }
 
 button {
@@ -12,9 +17,9 @@ button {
 	border: none;
 	padding: 10px 15px;
 	border-radius: 4px;
-	cursor: pointer;
 	width: 100%;
 	margin-top: 10px;
+	cursor: pointer;
 }
 
 button:hover {
