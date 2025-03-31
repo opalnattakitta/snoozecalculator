@@ -11,7 +11,7 @@
 		const FALL_ASLEEP_MINUTES = 15;
 		const SNOOZE_MINUTES = 9;
 
-		// Parse wake-up time
+		// Calculation Results for wake-up time schedule
 		const [wakeupHours, wakeupMinutes] = wakeupTimeStr.split(':').map(num => parseInt(num));
 		let wakeupTime = new Date();
 		wakeupTime.setHours(wakeupHours, wakeupMinutes, 0, 0);
