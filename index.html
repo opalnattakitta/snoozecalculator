@@ -11,10 +11,14 @@
 	</head>
 
 	<body>
-		<form>
+		<form class="calculator">
 			<h1>Snooze Calculator</h1>
-			<label for="wakeupTime">Wakeup Time</label>
-			<input type="text" id="name" name="name">
+
+			<div class="form-group">
+				<label for="wakeupTime">Wakeup Time:</label>
+				<input type="time" id="wakeupTime" name="name" required>
+			</div>
+			
 			<button>Calculate</button>
 		</form>
 	</body>
