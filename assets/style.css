@@ -1,6 +1,7 @@
 :root {
 	--base-size: 16px;
 	--gutter: 15px;
+	--gap: 10px;
 
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
@@ -9,7 +10,7 @@
 
 #calculation {
 	margin-top: 20px;
-	font-size: calc(var(--base-size)*1);
+	font-size: calc(var(--base-size)*0.9);
 	color: var(--blue);
 }
 
@@ -20,7 +21,7 @@
 /* Result display */
 .results {
 	margin-top: 20px;
-	padding: 15px;
+	padding: var(--gutter);
 	border-radius: 4px;
 	background-color: var(--light);
 	display: none;
@@ -28,6 +29,8 @@
 .results h2 {
 	font-family: "Outfit", sans-serif;
 	color: var(--blue);
+	font-size: calc(var(--base-size)* 1.4);
+	margin-bottom: var(--gap);
 }
 
 .time {
