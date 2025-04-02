@@ -23,7 +23,7 @@
 	padding: 15px;
 	border-radius: 4px;
 	background-color: var(--light);
-	/* display: none; */
+	display: none;
 }
 .results h2 {
 	font-family: "Outfit", sans-serif;
