@@ -24,7 +24,16 @@
 
 			<div class="form-group">
 				<label for="snoozeCount">Number of Snoozes:</label>
-				<input type="number" id="snoozeCount" min="0" max="10" value="2" required>
+				<select id="snoozeCount" required>
+					<option value="1">1</option>
+					<option value="2" selected>2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
 			</div>
 
 			<div class="form-group">
@@ -42,9 +51,9 @@
 
 			<div class="results" id="results">
 				<h2>Your Snooze Schedule</h2>
-				<p>Go to bed at: <span class="time" id="bedtime"></span></p>
-				<p>Set alarm for: <span class="time" id="alarmTime"></span></p>
-				<p>Final wake-up time: <span class="time" id="finalWakeup"></span></p>
+				<p>Go to Bed : <span class="time" id="bedtime"></span></p>
+				<p>Set Alarm : <span class="time" id="alarmTime"></span></p>
+				<p>Wake-up time: <span class="time" id="finalWakeup"></span></p>
 				
 				<div class="explanation">
 					<p id="calculation"></p>
