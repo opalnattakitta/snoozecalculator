@@ -67,3 +67,7 @@ h1 {
 	font-size: calc(var(--base-size)* 2);
 	text-align: center;
 }
+
+@media (min-width: 500px) {
+	
+}
