@@ -7,6 +7,12 @@
 	--light: #f0f5ff;
 }
 
+#calculation {
+	margin-top: 20px;
+	font-size: calc(var(--base-size)*1);
+	color: var(--blue);
+}
+
 .form-group {
 	margin-bottom: var(--gutter);
 }
@@ -66,6 +72,7 @@ h1 {
 	font-family: "Outfit", sans-serif;
 	font-size: calc(var(--base-size)* 2);
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 @media (min-width: 500px) {
