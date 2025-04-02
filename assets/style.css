@@ -30,6 +30,15 @@
 	color: var(--blue);
 }
 
+.time {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.explanation {
+	margin-top: 20px;
+	font-size: 0.9em;
+}
+
 /* Calculator Function */
 button {
 	font-size: var(--base-size);
