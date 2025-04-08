@@ -6,6 +6,15 @@
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
 	--light: #f0f5ff;
+
+	--blue: #4285F4;
+	--pink: #FF69B4;
+	--yellow: #FFCC00;
+	--orange: #FF7043;
+	--light-blue: #E3F2FD;
+	--light-yellow: #FFFDE7;
+	--light-pink: #FCE4EC;
+	--light-orange: #FFF3E0;
 }
 
 #calculation {
@@ -68,6 +77,11 @@
 
 .time-block:last-child {
 	margin-bottom: 0;
+}
+
+.bedtime-block {
+	background: var(--light-blue);
+	border-left: 5px solid var(--blue);
 }
 
 /* Calculator Function */
