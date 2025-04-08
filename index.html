@@ -51,9 +51,19 @@
 
 			<div class="results" id="results">
 				<h2>Your Snooze Schedule</h2>
-				<p>Go to Bed : <span class="time" id="bedtime"></span></p>
-				<p>Set Alarm : <span class="time" id="alarmTime"></span></p>
-				<p>Wake-up time: <span class="time" id="finalWakeup"></span></p>
+					<div class="timeline">
+						<div class="time-block bedtime-block" id="bedtimeBlock">
+							<div class="time-icon bedtime-icon">🛌</div>
+							<div class="time-content">
+								<strong>Go to bed at</strong>
+								<div class="time" id="bedtime"></div>
+						</div>
+					</div>
+					
+					<!-- <p>Go to Bed : <span class="time" id="bedtime"></span></p> -->
+
+					<p>Set Alarm : <span class="time" id="alarmTime"></span></p>
+					<p>Wake-up time: <span class="time" id="finalWakeup"></span></p>
 				
 				<div class="explanation">
 					<p id="calculation"></p>

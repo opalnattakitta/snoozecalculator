@@ -42,6 +42,34 @@
 	font-size: 0.9em;
 }
 
+/* Timeline */
+
+.timeline {
+	padding: 20px;
+	background: white;
+}
+
+.time-block {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 8px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	opacity: 0;
+	transform: translateX(-20px);
+	transition: all 0.5s ease;
+}
+
+.time-block.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.time-block:last-child {
+	margin-bottom: 0;
+}
+
 /* Calculator Function */
 button {
 	font-size: var(--base-size);
