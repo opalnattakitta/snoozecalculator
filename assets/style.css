@@ -14,7 +14,7 @@
 	--light-blue: #E3F2FD;
 	--light-yellow: #FFFDE7;
 	--light-pink: #FCE4EC;
-	--light-orange: #FFF3E0;
+--light-orange: #FFF3E0;
 }
 
 #calculation {
@@ -40,6 +40,7 @@
 	color: var(--blue);
 	font-size: calc(var(--base-size)* 1.4);
 	margin-bottom: var(--gap);
+	text-align: center;
 }
 
 .time {
@@ -79,9 +80,26 @@
 	margin-bottom: 0;
 }
 
+/* block */
+
 .bedtime-block {
 	background: var(--light-blue);
 	border-left: 5px solid var(--blue);
+}
+
+.alarm-block {
+	background: var(--light-yellow);
+	border-left: 5px solid var(--yellow);
+}
+
+.wakeup-block {
+	background: var(--light-pink);
+	border-left: 5px solid var(--pink);
+}
+
+.explanation-block {
+	background: var(--light-orange);
+	border-left: 5px solid var(--orange);
 }
 
 /* Calculator Function */
