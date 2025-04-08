@@ -47,10 +47,21 @@
 	font-weight: bold;
 	font-size: 1.2em;
 }
+
+.time-content {
+	flex: 1;
+}
+
 .explanation {
 	margin-top: 20px;
 	font-size: 0.9em;
 }
+
+/* id icon */
+.bedtime-icon { color: var(--blue); }
+.alarm-icon { color: var(--yellow); }
+.wakeup-icon { color: var(--pink); }
+.info-icon { color: var(--orange); }
 
 /* Timeline */
 
