@@ -113,6 +113,18 @@
 	border-left: 5px solid var(--orange);
 }
 
+/* Animation */
+
+@keyframes pulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+}
+
+.pulse {
+	animation: pulse 1s;
+}
+
 /* Calculator Function */
 button {
 	font-size: var(--base-size);
