@@ -125,6 +125,25 @@
 	animation: pulse 1s;
 }
 
+@keyframes ripple {
+	0% {
+		transform: scale(0);
+		opacity: 0.6;
+	}
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+.ripple {
+	position: absolute;
+	border-radius: 50%;
+	background: white;
+	opacity: 0;
+	animation: ripple 0.8s;
+}
+
 /* Calculator Function */
 button {
 	font-size: var(--base-size);
