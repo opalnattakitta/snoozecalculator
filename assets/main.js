@@ -39,8 +39,33 @@
 			`${FALL_ASLEEP_MINUTES} minutes to fall asleep, and ${snoozeCount} snoozes ` +
 			`(${totalSnoozeMinutes} minutes total).`;
 		
-		// Show results section
-		document.getElementById('results').style.display = 'block';
+	// 	// Show results section
+	// 	document.getElementById('results').style.display = 'block';
+	// }
+
+		// Show results section with animation
+		const resultsElement = document.getElementById('results');
+		resultsElement.style.display = 'block';
+		resultsElement.classList.add('pulse');
+		
+		// Reset timeline entries
+		const timeEntries = document.querySelectorAll('.time-entry');
+		timeEntries.forEach(entry => {
+			entry.classList.remove('show');
+		});
+
+		 // Animate timeline entries with delay
+		 setTimeout(() => {
+			document.getElementById('bedtimeEntry').classList.add('show');
+		}, 500);
+		
+		setTimeout(() => {
+			document.getElementById('alarmEntry').classList.add('show');
+		}, 1000);
+		
+		setTimeout(() => {
+			document.getElementById('wakeupEntry').classList.add('show');
+		}, 1500);
 	}
 
 		function formatTime(date) {
