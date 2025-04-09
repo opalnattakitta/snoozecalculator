@@ -45,45 +45,31 @@
 					<option value="5" selected>5 cycles (7.5 hours - recommended)</option>
 					<option value="6">6 cycles (9 hours)</option>
 				</select>
-				<small>Each sleep cycle is about 90 minutes</small>
 			</div>
 
-			<button onclick="calculateSleepTimes()" id="calculateButton">Calculate</button>
+			<button onclick="calculateSleepTimes()">Calculate</button>
 
 			<div class="results" id="results">
 				<h2>Your Sleep Schedule</h2>
+				
 				<div class="timeline">
-
-					<div class="time-block bedtime-block" id="bedtimeBlock">
-						<div class="time-content">
-							<p>Go to bed at</p>
-							<div class="time" id="bedtime"></div>
-						</div>
+					<div class="time-entry bedtime-entry" id="bedtimeEntry">
+						<div class="entry-title">Go to bed at</div>
+						<div class="time" id="bedtime"></div>
 					</div>
 					
-					<div class="time-block alarm-block" id="alarmBlock">
-						<div class="time-content">
-							<p>Set alarm for</p>
-							<div class="time" id="alarmTime"></div>
-						</div>
+					<div class="time-entry alarm-entry" id="alarmEntry">
+						<div class="entry-title">Set alarm for</div>
+						<div class="time" id="alarmTime"></div>
 					</div>
 					
-					<div class="time-block wakeup-block" id="wakeupBlock">
-						<div class="time-content">
-							<p>Final wake-up time</p>
-							<div class="time" id="finalWakeup"></div>
-						</div>
-					</div>
-					
-					<div class="time-block explanation-block" id="explanationBlock">
-						<div class="time-content">
-							<p>Sleep details</p>
-							<div id="calculation"></div>
-						</div>
+					<div class="time-entry wakeup-entry" id="wakeupEntry">
+						<div class="entry-title">Final wake-up time</div>
+						<div class="time" id="finalWakeup"></div>
 					</div>
 				</div>
-				<!-- timeline block -->
+
 			</div>
-			<!-- calculator block -->
+		</div>
 	</body>
 </html>
