@@ -18,7 +18,7 @@
 			<h1>Snooze Calculator</h1>
 
 			<div class="form-group">
-				<label for="wakeupTime">Desire Wakeup Time:</label>
+				<label for="wakeupTime">Desired Wakeup Time:</label>
 				<input type="time" id="wakeupTime" value="07:00" placeholder="07:00" required>
 			</div>
 
@@ -47,7 +47,7 @@
 				</select>
 			</div>
 
-			<button onclick="calculateSleepTimes()">Calculate</button>
+			<button id="calculateButton">Calculate</button>
 
 			<div class="results" id="results">
 				<h2>Your Sleep Schedule</h2>
@@ -68,7 +68,9 @@
 						<div class="time" id="finalWakeup"></div>
 					</div>
 				</div>
-
+				<div class="explanation">
+					<p id="calculation"></p>
+				</div>
 			</div>
 			
 		</div>

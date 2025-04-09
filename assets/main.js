@@ -1,72 +1,76 @@
 
 	//Snooze Calculator Function Javascript//
-	function calculateSleepTimes() {
-		// Get input values
-		const wakeupTimeStr = document.getElementById('wakeupTime').value;
-		const snoozeCount = parseInt(document.getElementById('snoozeCount').value);
-		const sleepCycles = parseInt(document.getElementById('sleepCycles').value);
 
-		// Set Constants value for each 
-		const CYCLE_MINUTES = 90;
-		const FALL_ASLEEP_MINUTES = 15;
-		const SNOOZE_MINUTES = 9;
-
-		// Calculation Results for wake-up time schedule
-		const [wakeupHours, wakeupMinutes] = wakeupTimeStr.split(':').map(num => parseInt(num));
-		let wakeupTime = new Date();
-		wakeupTime.setHours(wakeupHours, wakeupMinutes, 0, 0);
-
-		// Calculate total snooze time (no. of snooze count multiple 9min)
-		const totalSnoozeMinutes = snoozeCount * SNOOZE_MINUTES;
-
-		// Calculate alarm time (wake-up time minus plus total snooze time)
-		let alarmTime = new Date(wakeupTime);
-		alarmTime.setMinutes(alarmTime.getMinutes() - totalSnoozeMinutes);
+	document.addEventListener('DOMContentLoaded', function() {
+		// Link to Button in html
+		const calculateButton = document.getElementById('calculateButton');
 		
-		// Calculate bedtime (alarm time minus sleep cycles minus fall asleep time)
-		let bedtime = new Date(alarmTime);
-		const totalSleepMinutes = (sleepCycles * CYCLE_MINUTES) + FALL_ASLEEP_MINUTES;
-		bedtime.setMinutes(bedtime.getMinutes() - totalSleepMinutes);
-
-		// Display results
-		document.getElementById('bedtime').textContent = formatTime(bedtime);
-		document.getElementById('alarmTime').textContent = formatTime(alarmTime);
-		document.getElementById('finalWakeup').textContent = formatTime(wakeupTime);
+		// Add event listener
+		calculateButton.addEventListener('click', calculateSleepTimes);
 		
-		// Show explanation
-		document.getElementById('calculation').textContent = 
-			`Based on ${sleepCycles} sleep cycles (${sleepCycles * CYCLE_MINUTES} minutes), ` +
-			`${FALL_ASLEEP_MINUTES} minutes to fall asleep, and ${snoozeCount} snoozes ` +
-			`(${totalSnoozeMinutes} minutes total).`;
+		function calculateSleepTimes() {
+			const wakeupTimeStr = document.getElementById('wakeupTime').value;
+			const snoozeCount = parseInt(document.getElementById('snoozeCount').value);
+			const sleepCycles = parseInt(document.getElementById('sleepCycles').value);
+	
+			// Set Constants value for each factor
+			const CYCLE_MINUTES = 90;
+			const FALL_ASLEEP_MINUTES = 15;
+			const SNOOZE_MINUTES = 9;
+	
+			// Calculation Results for wake-up time schedule
+			const [wakeupHours, wakeupMinutes] = wakeupTimeStr.split(':').map(num => parseInt(num));
+			let wakeupTime = new Date();
+			wakeupTime.setHours(wakeupHours, wakeupMinutes, 0, 0);
+	
+			// Calculate total snooze time (no. of snooze count multiple 9min)
+			const totalSnoozeMinutes = snoozeCount * SNOOZE_MINUTES;
+	
+			// Calculate alarm time (wake-up time minus plus total snooze time)
+			let alarmTime = new Date(wakeupTime);
+			alarmTime.setMinutes(alarmTime.getMinutes() - totalSnoozeMinutes);
+			
+			// Calculate bedtime (alarm time minus sleep cycles minus fall asleep time)
+			let bedtime = new Date(alarmTime);
+			const totalSleepMinutes = (sleepCycles * CYCLE_MINUTES) + FALL_ASLEEP_MINUTES;
+			bedtime.setMinutes(bedtime.getMinutes() - totalSleepMinutes);
+	
+			// Display results
+			document.getElementById('bedtime').textContent = formatTime(bedtime);
+			document.getElementById('alarmTime').textContent = formatTime(alarmTime);
+			document.getElementById('finalWakeup').textContent = formatTime(wakeupTime);
+			
+			// Show explanation
+			document.getElementById('calculation').textContent = 
+				`Based on ${sleepCycles} sleep cycles (${sleepCycles * CYCLE_MINUTES} minutes), ` +
+				`${FALL_ASLEEP_MINUTES} minutes to fall asleep, and ${snoozeCount} snoozes ` +
+				`(${totalSnoozeMinutes} minutes total).`;
 		
-	// 	// Show results section
-	// 	document.getElementById('results').style.display = 'block';
-	// }
-
-		// Show results section with animation
-		const resultsElement = document.getElementById('results');
-		resultsElement.style.display = 'block';
-		resultsElement.classList.add('pulse');
-		
-		// Reset timeline entries
-		const timeEntries = document.querySelectorAll('.time-entry');
-		timeEntries.forEach(entry => {
-			entry.classList.remove('show');
-		});
-
-		 // Animate timeline entries with delay
-		 setTimeout(() => {
-			document.getElementById('bedtimeEntry').classList.add('show');
-		}, 500);
-		
-		setTimeout(() => {
-			document.getElementById('alarmEntry').classList.add('show');
-		}, 1000);
-		
-		setTimeout(() => {
-			document.getElementById('wakeupEntry').classList.add('show');
-		}, 1500);
-	}
+	
+			// Show results section with animation
+			const resultsElement = document.getElementById('results');
+			resultsElement.style.display = 'block';
+			resultsElement.classList.add('pulse');
+			
+			// Reset timeline entries
+			const timeEntries = document.querySelectorAll('.time-entry');
+			timeEntries.forEach(entry => {
+				entry.classList.remove('show');
+			});
+	
+			 // Animate timeline entries with delay
+			 setTimeout(() => {
+				document.getElementById('bedtimeEntry').classList.add('show');
+			}, 500);
+			
+			setTimeout(() => {
+				document.getElementById('alarmEntry').classList.add('show');
+			}, 1000);
+			
+			setTimeout(() => {
+				document.getElementById('wakeupEntry').classList.add('show');
+			}, 1500);
+		}
 
 		function formatTime(date) {
 			let hours = date.getHours();
@@ -79,3 +83,5 @@
 			
 			return `${hours}:${minutes} ${ampm}`;
 		}
+	  });
+	
