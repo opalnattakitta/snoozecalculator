@@ -2,12 +2,15 @@
 	--base-size: 16px;
 	--gutter: 15px;
 	--gap: 10px;
+	--border-radius: 5px;
 
 	--lightblue: #96adf3;
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
 	--dark: #1a285b;
 	--light: #f0f5ff;
+	--white: #ffffff;
+	
 
 	--orange: #ff9f43;
 	--lightorange:#ffd0d0;
@@ -16,11 +19,11 @@
 	--lightred: #ffd0d0;
 }
 
-/* #calculation {
+#calculation {
 	margin-top: 20px;
 	font-size: calc(var(--base-size)*0.9);
 	color: var(--blue);
-} */
+}
 
 /* Result display */
 .results {
@@ -35,6 +38,7 @@
 	color: var(--blue);
 	font-size: calc(var(--base-size)* 1.4);
 	margin-bottom: var(--gap);
+	margin-top: 20px;
 	animation: fadeIn 0.8s;
 }
 
@@ -54,25 +58,25 @@
 .time-entry:before {
 	content: '';
 	position: absolute;
-	left: -35px;
-	top: 15px;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background: var(--light);
-	border: 4px solid var(--blue);
-	box-shadow: 0 0 0 3px rgba(58, 81, 153, 0.2);
+	/* background: var(--white); */
+	/* border: 1px solid var(--blue); */
+	box-shadow: 3px var(--dark);
+	left: -40px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	/* border-radius: 50%; */
 }
 
 .time-entry {
 	position: relative;
 	margin-bottom: 25px;
-	padding: 15px;
-	background: white;
-	border-radius: 5px;
-	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	padding: var(--gutter);
+	background: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 	transform: translateX(50px);
-	opacity: 0;
+	opacity: 0.1;
 	transition: all 0.5s;
 }
 
@@ -127,18 +131,18 @@
 /* entry animation link to javascript */
 
 .bedtime-entry:before {
-	background-color: var(--blue);
-	border-color: var(--lightblue);
+	content: '🛌';
+	/* border-color: var(--lightblue); */
 }
 
 .alarm-entry:before {
-	background-color: var(--orange);
-	border-color: var(--lightorang);
+	content: '⏰';
+	/* border-color: var(--lightorang); */
 }
 
 .wakeup-entry:before {
-	background-color: var(--red);
-	border-color: var(--lightred);
+	content: '🌞';
+	/* border-color: var(--lightred); */
 }
 
 
@@ -167,6 +171,7 @@ button {
 	width: 100%;
 	margin-top: 10px;
 	cursor: pointer;
+	text-align: center;
 }
 
 button:hover {
@@ -199,6 +204,7 @@ h1 {
 	font-size: calc(var(--base-size)* 2);
 	text-align: center;
 	margin-bottom: 20px;
+	margin-top: var(--gutter);
 }
 
 @media (min-width: 500px) {
