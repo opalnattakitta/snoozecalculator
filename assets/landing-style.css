@@ -55,6 +55,8 @@ a {
 .clock-container img {
 	max-width: 100px;
 	max-height: max-content;
+	align-items: center;
+	margin: auto;
 }
 
 @keyframes shake {
