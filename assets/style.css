@@ -141,6 +141,11 @@
 	animation: pulse 1s;
 }
 
+.icon {
+	display: flex;
+	justify-content: space-between;
+}
+
 /* Content Icon */
 
 .bedtime-entry:before {
@@ -186,6 +191,11 @@ button {
 
 button:hover {
 	background-color: var(--dark-blue);
+}
+
+img {
+	width: 20%;
+	filter: drop-shadow(20%);
 }
 
 input, select {
