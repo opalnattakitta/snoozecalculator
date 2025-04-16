@@ -3,94 +3,23 @@
 		<title>⏰ snooze calculator</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link href="assets/reset.css" rel="stylesheet">
-			<link href="assets/style.css" rel="stylesheet">
+			<link href="assets/landing-style.css" rel="stylesheet">
 
 			<style>
-			@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-			@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-			</style>
+				@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+				@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+				</style>
+		<body>
+			<!-- <h1>Snooze Calculator</h1> -->
 
-			<script defer src="./assets/main.js"></script>
-	</head>
-
-	<body>
-		<div class="calculator" id="calculator">
-			<h1>Snooze Calculator</h1>
-
-			<div class="form-group">
-				<label for="wakeupTime">Desired Wakeup Time:</label>
-				<input type="time" id="wakeupTime" value="07:00" placeholder="07:00" required>
-			</div>
-
-			<div class="form-group">
-				<label for="snoozeCount">Number of Snoozes:</label>
-				<select id="snoozeCount" required>
-					<option value="1">1</option>
-					<option value="2" selected>2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-				</select>
-			</div>
-
-			<div class="form-group">
-				<label for="sleepCycles">Sleep Cycles:</label>
-				<select id="sleepCycles" required>
-					<option value="2">2 cycles (3 hours)</option>
-					<option value="3">3 cycles (4.5 hours)</option>
-					<option value="4">4 cycles (6 hours)</option>
-					<option value="5" selected>5 cycles (7.5 hours - recommended)</option>
-					<option value="6">6 cycles (9 hours)</option>
-				</select>
-				<small></small>
-			</div>
-
-			<button id="calculateButton">Calculate</button>
-
-			<div class="results" id="results">
-				<h2>🌙 Your Sleepy Schedule</h2>
-				
-				<div class="timeline">
-					<div class="time-entry bedtime-entry" id="bedtimeEntry">
-						<div class="icon">
-							<div>
-								<div class="entry-title">Go to bed at</div>
-								<div class="time" id="bedtime"></div>
-							</div>
-								<img src="assets/images/bed-icon.png">
-						</div>
-					</div>
-					
-					<div class="time-entry alarm-entry" id="alarmEntry">
-						<div class="icon">
-							<div>
-								<div class="entry-title">Set alarm for</div>
-								<div class="time" id="alarmTime"></div>
-							</div>
-								<img src="assets/images/man-alarm.png">
-						</div>
-					</div>
-					
-					<div class="time-entry wakeup-entry" id="wakeupEntry">
-						<div class="icon">
-							<div>
-								<div class="entry-title">Final wake-up time</div>
-								<div class="time" id="finalWakeup"></div>
-							</div>
-								<img src="assets/images/sun.png">
-						</div>
-					</div>
-				</div>
-				<div class="explanation">
-					<p id="calculation"></p>
+			<div class="clock-container">
+				<div>
+					<img src="assets/images/man-alarm.png">
 				</div>
 			</div>
-		</div>
-	</body>
-	<footer>
-		<p>calculator design by nattakitta</p>
-	</footer>
+			<a href="/calculator.html">Snoozers, this one's for you</a>
+		</body>
+		<footer>
+			<!-- <p>design by nattakitta</p> -->
+		</footer>
 </html>
