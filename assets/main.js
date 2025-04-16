@@ -78,21 +78,6 @@
 			results.classList.add('expanded');
 		}
 
-		// Scroll to jump result
-		setTimeout(() => {
-			results.scrollIntoView({ 
-			behavior: 'smooth', 
-			block: 'start' 
-		});
-	
-		// Add highlight to result
-		results.classList.add('highlight');
-			setTimeout(() => {
-			results.classList.remove('highlight');
-			}, 1000);
-		}, 300);
-
-
 		function formatTime(date) {
 			let hours = date.getHours();
 			let minutes = date.getMinutes();

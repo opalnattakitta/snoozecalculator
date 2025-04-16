@@ -34,6 +34,7 @@
 	border-radius: 4px;
 	background-color: var(--light);
 	display: none;
+	scroll-margin-top: 20px;
 }
 .results h2 {
 	color: var(--blue);
@@ -137,11 +138,11 @@
 	}
 }
 
-@keyframes highlight-pulse {
-	0% { box-shadow: 0 0 0 0 rgba(58, 81, 153, 0.4); }
-	70% { box-shadow: 0 0 0 10px rgba(58, 81, 153, 0); }
-	100% { box-shadow: 0 0 0 0 rgba(58, 81, 153}
-}
+/* @keyframes highlight-pulse {
+	0% { box-shadow: 0 0 0 0 var(--blue); 
+	70% { box-shadow: 0 0 0 10px var(--blue); 
+	100% { box-shadow: 0 0 0 0 var(--blue);
+} */
 
 .pulse {
 	animation: pulse 1s;
