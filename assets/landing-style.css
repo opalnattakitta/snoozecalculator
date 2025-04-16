@@ -1,3 +1,12 @@
+:root {
+	--font-base: "Outfit", sans-serif;
+
+	--base-size: 16px;
+	--gutter: 15px;
+	--gap: 10px;
+	--border-radius: 5px;
+}
+
 /* animation */
 @keyframes gradient-animation {
 	0%{
@@ -9,6 +18,25 @@
 	100%{
 		background-position: 0% 50%;
 	}
+}
+
+.clock-container {
+	animation: shake 0.5s infinite;
+}
+
+.clock-container img {
+	max-width: 100px;
+	max-height: max-content;
+	align-items: center;
+	margin: auto;
+}
+
+@keyframes shake {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(1deg); }
+	50% { transform: rotate(0deg); }
+	75% { transform: rotate(-1deg); }
+	100% { transform: rotate(0deg); }
 }
 
 body{
