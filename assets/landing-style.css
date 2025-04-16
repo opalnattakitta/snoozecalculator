@@ -53,8 +53,8 @@ a {
 }
 
 .clock-container img {
-	max-width: 100px;
-	max-height: max-content;
+	width: 100px;
+	justify-item: center;
 	align-items: center;
 	margin: auto;
 }
