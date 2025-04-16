@@ -191,10 +191,8 @@
 	margin-bottom: var(--gutter);
 }
 
-
 /* Calculator Function */
 button {
-	font-size: var(--base-size);
 	background-color: var(--blue);
 	color: white;
 	border: none;
@@ -205,6 +203,7 @@ button {
 	cursor: pointer;
 	text-align: center;
 	font-family: var(--font-base);
+	font-size: calc(var(--base-size)*1.2);
 }
 
 button:hover {
@@ -223,6 +222,9 @@ input, select {
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-family: var(--font-base);
+	font-size: calc(var(--base-size)*1.2);
+	color: var(--red);
+	/* font-weight: bold; */
 }
 
 footer {

@@ -5,6 +5,20 @@
 	--gutter: 15px;
 	--gap: 10px;
 	--border-radius: 5px;
+
+	--lightblue: #96adf3;
+	--blue: #3a5199;
+	--dark-blue: #2c3e75;
+	--navy: #1a285b;
+	--grey: #3f3f3f;
+	--light: #f0f5ff;
+	--white: #ffffff;
+	
+	--orange: #ff9f43;
+	--lightorange:#ffd0d0;
+
+	--red: #ff6b6b;
+	--lightred: #ffd0d0;
 }
 
 /* animation */
@@ -25,12 +39,17 @@ a {
 	margin: 90px;
 }
 
+.landing-container {
+	align-items: center;
+	justify-content: center;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
 .clock-container {
 	animation: shake 0.5s infinite;
 	align-items: center;
 	justify-content: center;
-	margin: 130px;
-	margin-top: 250px;
 }
 
 .clock-container img {
@@ -65,12 +84,18 @@ button:hover {
 	background-color: var(--dark-blue);
 }
 
+img:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 h1 {
 	font-family: "Outfit", sans-serif;
 	font-size: calc(var(--base-size)* 2);
 	text-align: center;
 	margin-bottom: 20px;
 	margin-top: var(--gutter);
+	font-weight: bold;
+	color: var(--blue);
 }
 
 body{
