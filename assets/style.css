@@ -1,4 +1,6 @@
 :root {
+	--font-base: "Outfit", sans-serif;
+
 	--base-size: 16px;
 	--gutter: 15px;
 	--gap: 10px;
@@ -7,9 +9,10 @@
 	--lightblue: #96adf3;
 	--blue: #3a5199;
 	--dark-blue: #2c3e75;
-	--dark: #1a285b;
+	--navy: #1a285b;
 	--light: #f0f5ff;
 	--white: #ffffff;
+	--grey: #3f3f3f;
 	
 
 	--orange: #ff9f43;
@@ -186,6 +189,7 @@ button {
 	margin-top: 10px;
 	cursor: pointer;
 	text-align: center;
+	font-family: var(--font-base);
 }
 
 button:hover {
@@ -198,12 +202,19 @@ input, select {
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	box-sizing: border-box;
+	font-family: var(--font-base);
+}
+
+p {
+	font-family: var(--font-base);
 }
 
 label {
 	display: block;
 	margin-bottom: 5px;
-	font-weight: bold;
+	font-weight: 450;
+	font-family: var(--font-base);
+	color: var(--grey);
 }
 
 body {
