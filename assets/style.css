@@ -173,6 +173,15 @@
 	transform: scale(0.95);
 }
 
+.results {
+	display: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.results.expanded {
+	transform: scale(1.05);
+}
+
 /* form fill in calculator */
 
 .form-group {
