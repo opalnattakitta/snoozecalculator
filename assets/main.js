@@ -2,6 +2,7 @@
 	//Snooze Calculator Function Javascript//
 
 	document.addEventListener('DOMContentLoaded', function() {
+		
 		// Link to Button in html
 		const calculateButton = document.getElementById('calculateButton');
 		
@@ -34,25 +35,28 @@
 			let bedtime = new Date(alarmTime);
 			const totalSleepMinutes = (sleepCycles * CYCLE_MINUTES) + FALL_ASLEEP_MINUTES;
 			bedtime.setMinutes(bedtime.getMinutes() - totalSleepMinutes);
-	
+
+
 			// Display results
 			document.getElementById('bedtime').textContent = formatTime(bedtime);
 			document.getElementById('alarmTime').textContent = formatTime(alarmTime);
 			document.getElementById('finalWakeup').textContent = formatTime(wakeupTime);
 			
-			// Show explanation
+			// Show explanation sleep cycle + fall asleep time + total snooze time
 			document.getElementById('calculation').textContent = 
 				`Based on ${sleepCycles} sleep cycles (${sleepCycles * CYCLE_MINUTES} minutes), ` +
 				`${FALL_ASLEEP_MINUTES} minutes to fall asleep, and ${snoozeCount} snoozes ` +
 				`(${totalSnoozeMinutes} minutes total).`;
 		
-	
-			// Show results section with animation
+
+
+			// Show results section with pulse animation
 			const resultsElement = document.getElementById('results');
 			resultsElement.style.display = 'block';
 			resultsElement.classList.add('pulse');
+			resultsElement.scrollIntoView({behavior:'smooth'});
 			
-			// Reset timeline entries
+			// Reset timeline 
 			const timeEntries = document.querySelectorAll('.time-entry');
 			timeEntries.forEach(entry => {
 				entry.classList.remove('show');
@@ -71,6 +75,7 @@
 				document.getElementById('wakeupEntry').classList.add('show');
 			}, 1500);
 		}
+		
 
 		function formatTime(date) {
 			let hours = date.getHours();
