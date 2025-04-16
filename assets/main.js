@@ -72,12 +72,6 @@
 			}, 1500);
 		}
 
-		// function expandTimeline() {
-		// 	// Add classes that trigger transitions
-		// 	calculator.classList.add('results-shown');
-		// 	results.classList.add('expanded');
-		// }
-
 		function formatTime(date) {
 			let hours = date.getHours();
 			let minutes = date.getMinutes();

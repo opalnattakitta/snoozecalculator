@@ -20,15 +20,22 @@
 	}
 }
 
+a {
+	text-align: center;
+	margin: 90px;
+}
+
 .clock-container {
 	animation: shake 0.5s infinite;
+	align-items: center;
+	justify-content: center;
+	margin: 130px;
+	margin-top: 250px;
 }
 
 .clock-container img {
 	max-width: 100px;
 	max-height: max-content;
-	align-items: center;
-	margin: auto;
 }
 
 @keyframes shake {
@@ -37,6 +44,10 @@
 	50% { transform: rotate(0deg); }
 	75% { transform: rotate(-1deg); }
 	100% { transform: rotate(0deg); }
+}
+
+div {
+	margin: auto;
 }
 
 button {
