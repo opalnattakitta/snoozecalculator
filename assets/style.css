@@ -25,6 +25,20 @@
 	color: var(--blue);
 }
 
+
+	@keyframes gradient-animation {
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}
+
+
 /* Result display */
 .results {
 	margin-top: 20px;
@@ -197,6 +211,9 @@ body {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 20px;
+	background: linear-gradient(360deg,#8eb484,#a9cddf,#fedfa7);
+	background-size: 180% 180%;
+	animation: gradient-animation 12s ease infinite;
 }
 
 h1 {
