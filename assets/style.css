@@ -244,9 +244,13 @@ label {
 
 body {
 	font-family: var(--font-base);
+	justify-content: center;
+	align-items: center;
 	max-width: 600px;
+	min-height: 100vh;
 	margin: 0 auto;
 	padding: 20px;
+	padding-top: 120px;
 	background: linear-gradient(360deg,#8eb484,#a9cddf,#fedfa7);
 	background-size: 180% 180%;
 	animation: gradient-animation 12s ease infinite;
