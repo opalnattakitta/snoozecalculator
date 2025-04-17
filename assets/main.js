@@ -88,5 +88,12 @@
 			
 			return `${hours}:${minutes} ${ampm}`;
 		}
+
+		 // Reset calculator
+		 function resetCalculator() {
+			document.getElementById('wakeupTime').value = '07:00';
+			document.getElementById('snoozeCount').value = '2';
+			document.getElementById('sleepCycles').value = '5';
+		 }
 	});
 	
