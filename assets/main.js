@@ -96,6 +96,10 @@
 			document.getElementById('wakeupTime').value = '07:00';
 			document.getElementById('snoozeCount').value = '2';
 			document.getElementById('sleepCycles').value = '5';
-		 }
+
+			// Hide results section
+				const resultsElement = document.getElementById('results');
+				resultsElement.style.display = 'none';
+			}
 	});
 	
