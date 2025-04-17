@@ -5,9 +5,11 @@
 		
 		// Link to Button in html
 		const calculateButton = document.getElementById('calculateButton');
+		const resetButton = document.getElementById('resetButton');
 		
 		// Add event listener
 		calculateButton.addEventListener('click', calculateSleepTimes);
+		resetButton.addEventListener('click', resetCalculator);
 		
 		function calculateSleepTimes() {
 			const wakeupTimeStr = document.getElementById('wakeupTime').value;
