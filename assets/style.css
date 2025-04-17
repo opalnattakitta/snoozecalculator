@@ -35,7 +35,7 @@
 	/* background-color: var(--light); */
 	display: none;
 	scroll-margin-top: 20px;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 .results h2 {
 	color: var(--blue);
