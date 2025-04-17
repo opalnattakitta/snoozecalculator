@@ -100,6 +100,12 @@
 			// Hide results section
 				const resultsElement = document.getElementById('results');
 				resultsElement.style.display = 'none';
-			}
+
+			// Reset timeline
+			const timeEntries = document.querySelectorAll('.time-entry');
+			timeEntries.forEach(entry => {
+				entry.classList.remove('show');
+			});
+		}
 	});
 	
