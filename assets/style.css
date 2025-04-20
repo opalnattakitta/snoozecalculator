@@ -313,6 +313,9 @@ h1 {
 }
 
 @media (min-width: 1000px) {
+	#calculation {
+		font-size: calc(var(--base-size)*1.4);
+	}
 
 	.entry-title {
 		font-size: calc(var(--base-size)* 1.5);
@@ -323,7 +326,7 @@ h1 {
 	}
 
 	img {
-		width: 17%;
+		width: 16%;
 		padding: 5px;
 	}
 
@@ -354,5 +357,9 @@ h1 {
 	body {
 		max-width: 750px;
 		padding-top: 175px;
+	}
+
+	footer {
+		font-size: calc(var(--base-size)*1);
 	}
 }
