@@ -38,8 +38,10 @@
 	margin-top: 50px;
 }
 .results h2 {
+	text-align: center;
 	color: var(--blue);
-	font-size: calc(var(--base-size)* 1.4);
+	font-size: calc(var(--base-size)*2);
+	font-weight: bold;
 	margin-bottom: var(--gap);
 	margin-top: 20px;
 	animation: fadeIn 0.8s;
@@ -278,7 +280,10 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 	padding-top: 120px;
-	background: linear-gradient(360deg,#8eb484,#a9cddf,#fedfa7);
+	/* background: linear-gradient(360deg,#8eb484,#a9cddf,#fedfa7); */
+	/* background: linear-gradient(180deg,#a9cddf,#ffbc28); */
+	/* gradient showing night and day */
+	background: linear-gradient(180deg,#002d61,#a9cddf,#ffba25);
 	background-size: 180% 180%;
 	animation: gradient-animation 12s ease infinite;
 }
