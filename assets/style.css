@@ -60,15 +60,29 @@
 
 .time-entry:before {
 	content: '';
+	counter-increment: steps;
+	content: counter(steps); 
 	position: absolute;
-	/* background: var(--white); */
-	/* border: 1px solid var(--blue); */
+	background: var(--white);
+	border: 1px solid var(--blue);
 	box-shadow: 3px var(--dark);
 	left: -40px;
 	top: 10px;
 	width: 30px;
 	height: 30px;
-	/* border-radius: 50%; */
+	border-radius: 50%;
+}
+
+.timeline:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 4px;
+	background: #3a5199;
+	border-radius: 2px;
+	animation: growLine 1.5s forwards;
 }
 
 .time-entry {
@@ -107,6 +121,15 @@
 	font-weight: bold;
 	font-size: 1.5em;
 	color: var(--red);
+}
+
+.timeline.animate-line:before {
+	animation: growLine 1.5s ease-out forwards;
+}
+
+.animate-grow-line {
+	height: 0;
+	animation: growLine 1.5s ease-out forwards;
 }
 
 /* Animation */
@@ -151,15 +174,18 @@
 /* Content Icon */
 
 .bedtime-entry:before {
-	content: '🛌';
+	/* content: '🛌'; */
+	content: '1';
 }
 
 .alarm-entry:before {
-	content: '⏰';
+	/* content: '⏰'; */
+	content: '2';
 }
 
 .wakeup-entry:before {
-	content: '🌞';
+	/* content: '🌞'; */
+	content: '3';
 }
 
 .calculator {
@@ -238,7 +264,7 @@ footer {
 label {
 	display: block;
 	margin-bottom: 5px;
-	font-weight: bold;
+	font-weight: 500;
 	color: var(--grey);
 }
 
@@ -259,9 +285,11 @@ body {
 h1 {
 	font-family: "Outfit", sans-serif;
 	font-size: calc(var(--base-size)* 2);
+	font-weight: bold;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	margin-top: var(--gutter);
+	color: var(--blue);
 }
 
 @media (min-width: 500px) {
