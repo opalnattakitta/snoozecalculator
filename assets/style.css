@@ -179,16 +179,28 @@
 .bedtime-entry:before {
 	/* content: '🛌'; */
 	content: '1';
+	color: var(--white);
+	font-weight: bold;
+	text-align: center;
+	padding-top: 4px;
 }
 
 .alarm-entry:before {
 	/* content: '⏰'; */
 	content: '2';
+	color: var(--white);
+	font-weight: bold;
+	text-align: center;
+	padding-top: 4px;
 }
 
 .wakeup-entry:before {
 	/* content: '🌞'; */
 	content: '3';
+	color: var(--white);
+	font-weight: bold;
+	text-align: center;
+	padding-top: 4px;
 }
 
 .calculator {
