@@ -42,8 +42,9 @@ a {
 .landing-container {
 	align-items: center;
 	justify-content: center;
-	margin-top: 200px;
+	/* margin-top: 200px; */
 	margin-bottom: 200px;
+	margin-top: 80px;
 }
 
 .clock-container {
@@ -53,7 +54,8 @@ a {
 }
 
 .clock-container img {
-	width: 100px;
+	/* width: 100px; */
+	width: 250px;
 	align-items: center;
 	margin: auto;
 	animation: fadeIn 1s;
@@ -97,14 +99,23 @@ img:hover {
 	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-h1 {
+h2 {
 	font-family: "Outfit", sans-serif;
 	font-size: calc(var(--base-size)* 2);
 	text-align: center;
-	margin-bottom: 20px;
-	margin-top: var(--gutter);
+	margin-top: 20px;
 	font-weight: bold;
 	color: var(--blue);
+	animation: fadeIn 1s;
+}
+
+h1 {
+	font-family: "Outfit", sans-serif;
+	font-size: calc(var(--base-size)* 2.2);
+	text-align: center;
+	margin-bottom: 15px;
+	font-weight: 650;
+	color: var(--light);
 	animation: fadeIn 1s;
 }
 

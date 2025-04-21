@@ -51,7 +51,6 @@
 				`(${totalSnoozeMinutes} minutes total).`;
 		
 
-
 			// Show results section with pulse animation
 			const resultsElement = document.getElementById('results');
 			resultsElement.style.display = 'block';

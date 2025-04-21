@@ -253,6 +253,12 @@ button:hover {
 	background-color: var(--dark-blue);
 }
 
+small {
+	font-size: calc(var(--base-size)*0.7);
+	color: #acacac;
+	text-align: right;
+}
+
 img {
 	width: 23%;
 	filter: drop-shadow(20%);
