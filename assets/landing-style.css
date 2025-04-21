@@ -54,7 +54,6 @@ a {
 }
 
 .clock-container img {
-	/* width: 100px; */
 	width: 250px;
 	align-items: center;
 	margin: auto;
@@ -125,4 +124,32 @@ body{
 	background: linear-gradient(180deg,#002d61,#a9cddf,#ffba25);
 	background-size: 180% 180%;
 	animation: gradient-animation 12s ease infinite;
+}
+
+@media (min-width: 1000px) {
+	.landing-container {
+		margin-bottom: 100px;
+		margin-top: 100px;
+	}
+
+	.clock-container img {
+		width: 330px;
+		display: flex;
+	}
+
+	h2 {
+		font-size: calc(var(--base-size)* 3.5);
+		position: absolute;
+		right: 110px;
+		bottom: 350px;
+	}
+	
+	h1 {
+		font-size: calc(var(--base-size)* 4.5);
+		position: absolute;
+		left: 200px;
+		bottom: 335px;
+		color: var(--blue);
+	}
+
 }
