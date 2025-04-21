@@ -6,10 +6,24 @@
 		// Link to Button in html
 		const calculateButton = document.getElementById('calculateButton');
 		const resetButton = document.getElementById('resetButton');
+		const modal = document.getElementById("infoModal");
+		const infoBtn = document.getElementById("infoBtn"); 
+		const closeBtn = document.querySelector(".close-button");
 		
 		// Add event listener
 		calculateButton.addEventListener('click', calculateSleepTimes);
 		resetButton.addEventListener('click', resetCalculator);
+
+		// Open modal
+		infoBtn.onclick = function () {
+			modal.style.display = "block";
+		};
+
+		// Close modal
+		closeBtn.onclick = function () {
+			modal.style.display = "none";
+		};
+		
 		
 		function calculateSleepTimes() {
 			const wakeupTimeStr = document.getElementById('wakeupTime').value;
@@ -106,20 +120,5 @@
 				entry.classList.remove('show');
 			});
 		}
-
-		function openModal() {
-			document.getElementById("infoModal").style.display = "block";
-		}
-		  
-		function closeModal() {
-			document.getElementById("infoModal").style.display = "none";
-		}
-		
-		window.onclick = function(event) {
-			const modal = document.getElementById("infoModal");
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		};
 	});
 	
