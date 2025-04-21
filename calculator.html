@@ -51,6 +51,28 @@
 			<button id="calculateButton">Calculate</button>
 			</div>
 		</div>
+
+		<!-- Floating Info Button -->
+		<div class="tooltip-container">
+			<button id="infoBtn" onclick="openModal()">?</button>
+			<span class="tooltip-text">How it works</span>
+  		</div>
+
+		<!-- Modal for Explanation -->
+		<div id="infoModal" class="modal">
+			<div class="modal-content">
+				<span class="close-button" onclick="closeModal()">&times;</span>
+					<h3>How Snooze Calculator Works</h3>
+					<p>This calculator helps you plan your bedtime based on how many times you snooze and how many sleep cycles you need.<br><br>
+						1️⃣ Enter your desired wake-up time.<br>
+						🔁 Choose how many times you usually snooze (9 min each).<br>
+						💤 Select your preferred number of sleep cycles (1 = 90 mins).<br><br>
+						We'll calculate when to go to bed and when to set your alarm.
+	  				</p>
+			</div>
+  		</div>
+
+		
 		<div class="results" id="results">
 			<h2>Snooze Schedule</h2>
 			
@@ -86,11 +108,11 @@
 				</div>
 			</div>
 		<div class="explanation">
-			<p id="calculation">💡</p>
+			<p id="calculation"></p>
 		</div>
 		<div class="reset-button-container">
 			<button id="resetButton">Reset</button>
-		  </div>
+		</div>
 	</body>
 	<footer>
 		<p>snooze calculator design by</p>
