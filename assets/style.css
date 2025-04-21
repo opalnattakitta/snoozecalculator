@@ -266,6 +266,7 @@ input, select {
 	box-sizing: border-box;
 	font-family: var(--font-base);
 	font-size: calc(var(--base-size)*1.2);
+	font-weight: 600;
 	color: var(--red);
 	/* font-weight: bold; */
 }
